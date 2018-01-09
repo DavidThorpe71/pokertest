@@ -49,6 +49,22 @@ var defineHand = function() {
 	}
 	console.log(flush());
 
+	//Find cards with same number
+	function duplicateNumber() {
+		for (var i = 0; i < 4; i++) {
+			var count = 0;
+			for (var j = 0; j < 4; j++){
+				if (cardNumbers[i] === cardNumbers[j]) {
+					count++
+				}
+			}
+			if count > 0 {
+				var a = new Object();
+
+			}
+		}
+	}
+
 }
 
 defineHand();
