@@ -5,11 +5,12 @@ var suitInputs = ['C', 'D', 'H', 'S'];
 
 
 // define variables
-var handInput = ['9H', '6D', 'TC', '7H', '3S'];
+var handInput = ['2H', '3H', '6H', '5H', '3H'];
 var hand = [];
 var cardNumbers = [];
 var cardSuits = [];
 
+// Convert hand from numbers and letters to numbers and put in seperate arrays to analyse hand outcome
 var createHand = function() {
 	for (var i = 0; i < handInput.length; i++) {
 		cardNumbers[i] = numInputs.indexOf(handInput[i][0]) + 1;
@@ -20,3 +21,34 @@ var createHand = function() {
 }
 
 createHand();
+
+// Function in which hand is defined (e.g. Flush, Pair etc)
+var defineHand = function() {
+
+	var sortedCardNumbers = cardNumbers.sort();
+	var sortedCardSuits = cardSuits.sort();
+
+	//Test if hand is straight
+	function straight() {
+		for (var i = 0; i < 4; i++) {
+			if (sortedCardNumbers[i] + 1 !== sortedCardNumbers[i + 1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	//Test if hand is flush
+	function flush() {
+		for (var i = 0; i < 4; i++) {
+			if (sortedCardSuits[i] !== sortedCardSuits[i + 1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	console.log(flush());
+
+}
+
+defineHand();
