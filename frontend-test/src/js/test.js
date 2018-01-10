@@ -56,7 +56,6 @@ var defineHand = function() {
 		var previousCard;
 		
 		for (var i = 0; i < 5; i++) {
-			console.log(`before if log = ${previousCard}`);
 			if (sortedCardNumbers[i] !== previousCard) {
 				uniqueArray.push(sortedCardNumbers[i]);
 				countArray.push(1);
@@ -64,7 +63,6 @@ var defineHand = function() {
 				countArray[countArray.length - 1]++;
 			}
 			previousCard = sortedCardNumbers[i];
-			console.log(`after if log = ${previousCard}`);
 		}
 		return [uniqueArray, countArray];	
 	}
