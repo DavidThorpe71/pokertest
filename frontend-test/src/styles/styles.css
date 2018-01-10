@@ -2,10 +2,13 @@
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.hand {
-
-}
-
 .card {
 	width: 20px;
+	margin: 5px;
+}
+
+.hand,
+.title,
+#result {
+	margin: 10px;
 }
