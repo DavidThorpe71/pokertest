@@ -5,7 +5,7 @@ var suitInputs = ['C', 'D', 'H', 'S'];
 
 
 // define variables
-var handInput = ['2H', '3H', '6H', '5H', '3H'];
+var handInput = ['2H', '2H', '2H', '5H', '5H'];
 var hand = [];
 var cardNumbers = [];
 var cardSuits = [];
@@ -47,24 +47,28 @@ var defineHand = function() {
 		}
 		return true;
 	}
-	console.log(flush());
+
 
 	//Find cards with same number
 	function duplicateNumber() {
-		for (var i = 0; i < 4; i++) {
-			var count = 0;
-			for (var j = 0; j < 4; j++){
-				if (cardNumbers[i] === cardNumbers[j]) {
-					count++
-				}
+		var countArray = [];
+		var uniqueArray = [];
+		var previousCard;
+		
+		for (var i = 0; i < 5; i++) {
+			console.log(`before if log = ${previousCard}`);
+			if (sortedCardNumbers[i] !== previousCard) {
+				uniqueArray.push(sortedCardNumbers[i]);
+				countArray.push(1);
+			} else {
+				countArray[countArray.length - 1]++;
 			}
-			if count > 0 {
-				var a = new Object();
-
-			}
+			previousCard = sortedCardNumbers[i];
+			console.log(`after if log = ${previousCard}`);
 		}
+		return [uniqueArray, countArray];	
 	}
-
+	console.log(duplicateNumber());
 }
 
 defineHand();
