@@ -4,10 +4,7 @@ var numInputs = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'
 var suitInputs = ['C', 'D', 'H', 'S'];
 
 
-
 // define variables
-var handInput = ['2H', '2H', '2H', '5H', '5H'];
-
 var cardNumbers = [];
 var cardSuits = [];
 
@@ -18,8 +15,8 @@ var createHand = function(hand) {
 		cardSuits[i] = suitInputs.indexOf(hand[i][1]) + 1	
 	}
 	
-	var sortedCardNumbers = cardNumbers.sort();
-	var sortedCardSuits = cardSuits.sort();
+	var sortedCardNumbers = cardNumbers.sort(function(a, b){return a - b});
+	var sortedCardSuits = cardSuits.sort(function(a, b){return a - b});
 
 	//Test if hand is straight
 	function straight() {
@@ -69,8 +66,8 @@ var createHand = function(hand) {
 		return "flush";
 	};
 
-	var sortUniArr = uniqueArray.sort();
-	var sortCouArr = countArray.sort();
+	var sortUniArr = uniqueArray.sort(function(a, b){return a - b});
+	var sortCouArr = countArray.sort(function(a, b){return a - b});
 
 	if (uniqueArray.length === 2) {
 		if (sortCouArr[2] === 1) {

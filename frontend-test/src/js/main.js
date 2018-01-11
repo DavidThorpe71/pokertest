@@ -35,8 +35,8 @@ function getCards() {
 	var hand1 = [];
 	
 	for (var i = 0; i < 5; i++) {
-		hand0[i] = document.getElementById(`hand0_card${i}`).value;
-		hand1[i] = document.getElementById(`hand1_card${i}`).value;
+		hand0[i] = document.getElementById(`hand0_card${i}`).value.toUpperCase();
+		hand1[i] = document.getElementById(`hand1_card${i}`).value.toUpperCase();
 	}
 
 	//Create two player objects
