@@ -9,6 +9,7 @@
 
 .hand,
 .title,
-#result {
+#result,
+.display {
 	margin: 10px;
 }
