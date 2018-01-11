@@ -4,27 +4,20 @@ var numInputs = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'
 var suitInputs = ['C', 'D', 'H', 'S'];
 
 
+
 // define variables
 var handInput = ['2H', '2H', '2H', '5H', '5H'];
-var hand = [];
+
 var cardNumbers = [];
 var cardSuits = [];
 
 // Convert hand from numbers and letters to numbers and put in seperate arrays to analyse hand outcome
-var createHand = function() {
-	for (var i = 0; i < handInput.length; i++) {
-		cardNumbers[i] = numInputs.indexOf(handInput[i][0]) + 1;
-		cardSuits[i] = suitInputs.indexOf(handInput[i][1]) + 1	
+var createHand = function(hand) {
+	for (var i = 0; i < hand.length; i++) {
+		cardNumbers[i] = numInputs.indexOf(hand[i][0]) + 1;
+		cardSuits[i] = suitInputs.indexOf(hand[i][1]) + 1	
 	}
-	console.log(cardNumbers);
-	console.log(cardSuits);
-}
-
-createHand();
-
-// Function in which hand is defined (e.g. Flush, Pair etc)
-var defineHand = function() {
-
+	
 	var sortedCardNumbers = cardNumbers.sort();
 	var sortedCardSuits = cardSuits.sort();
 
@@ -48,12 +41,11 @@ var defineHand = function() {
 		return true;
 	}
 
-
+	var countArray = [];
+	var uniqueArray = [];
+	var previousCard;
 	//Find cards with same number
 	function duplicateNumber() {
-		var countArray = [];
-		var uniqueArray = [];
-		var previousCard;
 		
 		for (var i = 0; i < 5; i++) {
 			if (sortedCardNumbers[i] !== previousCard) {
@@ -64,9 +56,37 @@ var defineHand = function() {
 			}
 			previousCard = sortedCardNumbers[i];
 		}
-		return [uniqueArray, countArray];	
+		return [uniqueArray, countArray];
 	}
-	console.log(duplicateNumber());
-}
+	duplicateNumber();
 
-defineHand();
+	//check for straight flush, staright and flush
+	if (straight() && flush()) {
+		return "straight flush";
+	} else if (straight()) {
+		return "straight";
+	} else if (flush()) {
+		return "flush";
+	};
+
+	var sortUniArr = uniqueArray.sort();
+	var sortCouArr = countArray.sort();
+
+	if (uniqueArray.length === 2) {
+		if (sortCouArr[2] === 1) {
+			return "4 of a kind!";
+		} else {
+			return "full house";
+		}
+	} else if (uniqueArray.length === 3) {
+		if (sortCouArr[2] === 2) {
+			return "Two pairs";
+		} else {
+			return "three of a kind"
+		}
+	} else if (uniqueArray.length === 4) {
+		return "pair"
+	} else if (uniqueArray.length === 5) {
+		return `high card ${numInputs[sortUniArr[4] - 1]}`
+	}
+};

@@ -1,11 +1,16 @@
 var Result = { "win": 1, "loss": 2, "tie": 3 };
 
-var PokerHand = function() {
-
+var PokerHand = function(hand) {
+	this.hand = hand;
 };
 
-PokerHand.prototype.compareWith = function(hand) {
-	return Result.tie;
+PokerHand.prototype.compareWith = function(otherHand) {
+	var hand1 = createHand(this.hand);
+	var hand2 = createHand(otherHand.hand);
+
+	console.log(hand1);
+	console.log(hand2);
+
 };
 
 
@@ -22,4 +27,22 @@ for (var i = 0; i < 2; i++) {
 		newCard.setAttribute('maxlength', '2');
 		document.getElementById(`hand_${i}`).appendChild(newCard);
 	}
+}
+
+
+function getCards() {
+	var hand0 = [];
+	var hand1 = [];
+	
+	for (var i = 0; i < 5; i++) {
+		hand0[i] = document.getElementById(`hand0_card${i}`).value;
+		hand1[i] = document.getElementById(`hand1_card${i}`).value;
+	}
+
+	//Create two player objects
+	const playerOne = new PokerHand(hand0);
+	const playerTwo = new PokerHand(hand1);
+
+	//Display results
+	document.getElementById("outcome").innerHTML = playerOne.compareWith(playerTwo);
 }
