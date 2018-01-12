@@ -57,33 +57,50 @@ var createHand = function(hand) {
 	}
 	duplicateNumber();
 
-	//check for straight flush, staright and flush
-	if (straight() && flush()) {
-		return "straight flush";
-	} else if (straight()) {
-		return "straight";
-	} else if (flush()) {
-		return "flush";
-	};
-
 	var sortUniArr = uniqueArray.sort(function(a, b){return a - b});
 	var sortCouArr = countArray.sort(function(a, b){return a - b});
 
+	//check for straight flush, staright and flush
+	if (straight() && flush() && sortedCardNumbers[0] === 9) {
+		return ['Royal Flush', 10];
+	} else if (straight() && flush()) {
+		return ['Straight Flush', 9];
+	} else if (straight()) {
+		return ['Straight' ,5];
+	} else if (flush()) {
+		return ['Flush', 6];
+	};
+
+
 	if (uniqueArray.length === 2) {
 		if (sortCouArr[2] === 1) {
-			return "4 of a kind!";
+			return ['Four of a kind', 8];
 		} else {
-			return "full house";
-		}
+			return ['Full House', 7];
+		};
 	} else if (uniqueArray.length === 3) {
 		if (sortCouArr[2] === 2) {
-			return "Two pairs";
+			return ['Two Pairs', 3];
 		} else {
-			return "three of a kind"
+			return ['Three of a Kind', 4];
 		}
 	} else if (uniqueArray.length === 4) {
-		return "pair"
+		return ['Pair', 2];
 	} else if (uniqueArray.length === 5) {
-		return `high card ${numInputs[sortUniArr[4] - 1]}`
+		return [`high card ${numInputs[sortUniArr[4] - 1]}`, 1 + (sortedCardNumbers[4] / 13)];
+		// return `high card ${numInputs[sortUniArr[4] - 1]}`
 	}
+
+
+	// *** Hand scoring ***
+	// Royal Flush - 10
+	// Straight Flush - 9
+	// Four of a kind - 8
+	// Full House - 7
+	// Flush - 6
+	// Straight - 5
+	// Three of a kind - 4
+	// Two pairs - 3
+	// Pair - 2
+	// High Card - 1
 };

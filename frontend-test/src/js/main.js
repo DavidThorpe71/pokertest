@@ -8,9 +8,13 @@ PokerHand.prototype.compareWith = function(otherHand) {
 	var hand1 = createHand(this.hand);
 	var hand2 = createHand(otherHand.hand);
 
-	console.log(hand1);
-	console.log(hand2);
-
+	if (hand1[1] > hand2[1]) {
+		return [Result.win, hand1[0]];
+	} else if (hand1[1] < hand2[1]) {
+		return [Result.loss, hand2[0]];
+	} else {
+		return [Result.tie, hand1[0], hand2[0]];
+	};
 };
 
 
