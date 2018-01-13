@@ -2,15 +2,80 @@
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #ffe3e7;
+}
+
 .card {
 	width: 20px;
-	margin: 5px;
+	margin: 5px 10px 5px 0;
 }
 
 .hand,
-.title,
 #result,
 .display,
-#outcome {
-	margin: 10px;
+.outcomeSection {
+	margin: 10px 30px;
 }
+
+.icon img {
+	width: 100px;
+
+}
+
+header,
+.hand {
+	display: flex;
+	align-items: center;
+}
+
+.hand {
+	flex-wrap: wrap;
+}
+
+h3 {
+	font-family: 'Pacifico', cursive;
+	font-size: 2rem;
+	margin: 20px 0;
+}
+
+.outcomeSection {
+	display: flex;
+}
+
+.handText {
+	margin-right: 5px;
+}
+
+button {
+    background-color: pink;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 0.8rem;
+    text-decoration: none;
+    /*height: 36px;*/
+    padding: 10px 16px;
+  	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.1s
+}
+
+button:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.13), 0 2px 3px rgba(0,0,0,0.24);
+}
+
+button:active {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transform: translateY(2px);
+}
+
+@media all and (max-width: 445px) {
+      .handText {
+      	width: 100%;
+      }
+      h3 {
+      	font-size: 1.5rem;
+      }
+    }

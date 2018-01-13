@@ -23,7 +23,7 @@ for (var i = 0; i < 2; i++) {
 	newHand.setAttribute('id', `hand_${i}`);
 	newHand.setAttribute('class', `hand`);
 	document.getElementById('cardInputs').appendChild(newHand);
-	newHand.innerHTML = `Enter cards for Player ${i + 1}`;
+	newHand.innerHTML = `<div class="handText">Enter cards for Player ${i + 1}: </div>`;
 	for (var j = 0; j < 5; j++){
 		var newCard = document.createElement('INPUT');
 		newCard.setAttribute('class', 'card');
