@@ -7,7 +7,6 @@ var PokerHand = function(hand) {
 PokerHand.prototype.compareWith = function(otherHand) {
 	var hand1 = createHand(this.hand);
 	var hand2 = createHand(otherHand.hand);
-
 	
 	if (hand1[0] === 'error' || hand2[0] === 'error') {
 		return "An invalid card has been entered please try again";
@@ -20,6 +19,7 @@ PokerHand.prototype.compareWith = function(otherHand) {
 	}
 };
 
+// Create html for each hand and card
 var newHandHtml = '';
 
 for (var i = 0; i < 2; i++) {
@@ -34,12 +34,11 @@ for (var i = 0; i < 2; i++) {
 }
 document.getElementById(`cardInputs`).innerHTML = newHandHtml;
 
-
+// gets input values, creates two player objects and displays result of compareWith method
 function getCards() {
 	var hand0 = [];
 	var hand1 = [];
 	
-
 	for (var i = 0; i < 5; i++) {
 		hand0[i] = document.getElementById(`hand0_card${i}`).value.toUpperCase();
 		hand1[i] = document.getElementById(`hand1_card${i}`).value.toUpperCase();
@@ -53,11 +52,11 @@ function getCards() {
 	document.getElementById("outcome").innerHTML = playerOne.compareWith(playerTwo);
 }
 
+
 // Possible card number inputs
 var numInputs = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'];
 // Possible suit inputs
 var suitInputs = ['C', 'D', 'H', 'S'];
-
 
 // define variables
 var cardNumbers = [];
@@ -73,7 +72,7 @@ var createHand = function(hand) {
 	var sortedCardNumbers = cardNumbers.sort(function(a, b){return a - b;});
 	var sortedCardSuits = cardSuits.sort(function(a, b){return a - b;});
 
-	// check for input errors
+	// Test if there are input errors
 	function error() {
 		for (var i = 0; i < 5; i++) {
 			if (cardNumbers[i] < 1) {
@@ -109,7 +108,7 @@ var createHand = function(hand) {
 	var countArray = [];
 	var uniqueArray = [];
 	var previousCard;
-	//Find cards with same number
+	//Find cards with same number and sort into two arrays - one holding each unique value and one showing the counts of each value
 	function duplicateNumber() {
 		
 		for (var i = 0; i < 5; i++) {

@@ -1,4 +1,4 @@
-* {
+html {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background-color: #ffe3e7;
 }
@@ -21,17 +21,14 @@ input {
 }
 
 .hand,
-#result,
+.result,
 .display,
 .outcomeSection {
 	margin: 10px 30px;
 }
 
-#result {
+.result {
 	text-align: center;
-}
-
-#result {
 	margin-top: 20px;
 }
 
@@ -93,7 +90,7 @@ button:active {
 }
 
 @media all and (max-width: 445px) {
-      h3 {
-      	font-size: 1.5rem;
-      }
+	h3 {
+     	font-size: 1.5rem;
     }
+}
