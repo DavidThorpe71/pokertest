@@ -18,25 +18,43 @@ PokerHand.prototype.compareWith = function(otherHand) {
 };
 
 
+// for (var i = 0; i < 2; i++) {
+// 	var newHand = document.createElement('DIV');
+// 	newHand.setAttribute('id', `hand_${i}`);
+// 	newHand.setAttribute('class', `hand`);
+// 	document.getElementById('cardInputs').appendChild(newHand);
+// 	newHand.innerHTML = `<div class="handText">Enter cards for Player ${i + 1}: </div>`;
+// 	for (var j = 0; j < 5; j++){
+// 		var newCard = document.createElement('INPUT');
+// 		newCard.setAttribute('class', 'card');
+// 		newCard.setAttribute('id', `hand${i}_card${j}`);
+// 		newCard.setAttribute('maxlength', '2');
+// 		document.getElementById(`hand_${i}`).appendChild(newCard);
+// 	}
+// }
+
+
+var newHandHtml = '';
+
 for (var i = 0; i < 2; i++) {
-	var newHand = document.createElement('DIV');
-	newHand.setAttribute('id', `hand_${i}`);
-	newHand.setAttribute('class', `hand`);
-	document.getElementById('cardInputs').appendChild(newHand);
-	newHand.innerHTML = `<div class="handText">Enter cards for Player ${i + 1}: </div>`;
+	newHandHtml += `
+		<div id="hand_${i}" class="hand">
+			<div class="handText">Enter cards for Player ${i + 1}: </div>
+			<div class="cards">`;
 	for (var j = 0; j < 5; j++){
-		var newCard = document.createElement('INPUT');
-		newCard.setAttribute('class', 'card');
-		newCard.setAttribute('id', `hand${i}_card${j}`);
-		newCard.setAttribute('maxlength', '2');
-		document.getElementById(`hand_${i}`).appendChild(newCard);
+		newHandHtml += `<input id="hand${i}_card${j}" class="card" maxlength="2"></input>`
 	}
+	newHandHtml += `</div></div>`;
 }
+document.getElementById(`cardInputs`).innerHTML = newHandHtml;
 
 
 function getCards() {
 	var hand0 = [];
 	var hand1 = [];
+	
+
+
 	
 	for (var i = 0; i < 5; i++) {
 		hand0[i] = document.getElementById(`hand0_card${i}`).value.toUpperCase();
