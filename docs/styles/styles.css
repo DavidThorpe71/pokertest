@@ -34,15 +34,11 @@ input {
 
 .icon img {
 	width: 100px;
-
 }
 
 header {
 	display: flex;
 	align-items: center;
-}
-
-header {
 	justify-content: center;
 }
 
@@ -62,6 +58,10 @@ h3 {
 .outcomeSection {
 	display: flex;
 	justify-content: center;
+}
+
+.outcomePara {
+	text-align: center;
 }
 
 .handText {
