@@ -8,7 +8,10 @@ PokerHand.prototype.compareWith = function(otherHand) {
 	var hand1 = createHand(this.hand);
 	var hand2 = createHand(otherHand.hand);
 
-	if (hand1[1] > hand2[1]) {
+	
+	if (hand1[0] === 'error' || hand2[0] === 'error') {
+		return "An invalid card has been entered please try again"
+	} else if (hand1[1] > hand2[1]) {
 		return [Result.win, hand1[0]];
 	} else if (hand1[1] < hand2[1]) {
 		return [Result.loss, hand2[0]];
@@ -16,23 +19,6 @@ PokerHand.prototype.compareWith = function(otherHand) {
 		return [Result.tie, hand1[0], hand2[0]];
 	};
 };
-
-
-// for (var i = 0; i < 2; i++) {
-// 	var newHand = document.createElement('DIV');
-// 	newHand.setAttribute('id', `hand_${i}`);
-// 	newHand.setAttribute('class', `hand`);
-// 	document.getElementById('cardInputs').appendChild(newHand);
-// 	newHand.innerHTML = `<div class="handText">Enter cards for Player ${i + 1}: </div>`;
-// 	for (var j = 0; j < 5; j++){
-// 		var newCard = document.createElement('INPUT');
-// 		newCard.setAttribute('class', 'card');
-// 		newCard.setAttribute('id', `hand${i}_card${j}`);
-// 		newCard.setAttribute('maxlength', '2');
-// 		document.getElementById(`hand_${i}`).appendChild(newCard);
-// 	}
-// }
-
 
 var newHandHtml = '';
 
@@ -53,9 +39,6 @@ function getCards() {
 	var hand0 = [];
 	var hand1 = [];
 	
-
-	// Input error checks
-
 
 	for (var i = 0; i < 5; i++) {
 		hand0[i] = document.getElementById(`hand0_card${i}`).value.toUpperCase();
@@ -89,6 +72,19 @@ var createHand = function(hand) {
 	
 	var sortedCardNumbers = cardNumbers.sort(function(a, b){return a - b});
 	var sortedCardSuits = cardSuits.sort(function(a, b){return a - b});
+
+	// check for input errors
+	function error() {
+		for (var i = 0; i < 5; i++) {
+			if (cardNumbers[i] < 1) {
+				return true;
+			}
+			if (cardSuits[i] < 1) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	//Test if hand is straight
 	function straight() {
@@ -132,6 +128,9 @@ var createHand = function(hand) {
 	var sortUniArr = uniqueArray.sort(function(a, b){return a - b});
 	var sortCouArr = countArray.sort(function(a, b){return a - b});
 
+	if (error() === true) {
+		return ['error', 0];
+	}
 	//check for straight flush, staright and flush
 	if (straight() && flush() && sortedCardNumbers[0] === 9) {
 		return ['Royal Flush', 10];
@@ -160,19 +159,5 @@ var createHand = function(hand) {
 		return ['Pair', 2];
 	} else if (uniqueArray.length === 5) {
 		return [`high card ${numInputs[sortUniArr[4] - 1]}`, 1 + (sortedCardNumbers[4] / 13)];
-		// return `high card ${numInputs[sortUniArr[4] - 1]}`
 	}
-
-
-	// *** Hand scoring ***
-	// Royal Flush - 10
-	// Straight Flush - 9
-	// Four of a kind - 8
-	// Full House - 7
-	// Flush - 6
-	// Straight - 5
-	// Three of a kind - 4
-	// Two pairs - 3
-	// Pair - 2
-	// High Card - 1
 };
