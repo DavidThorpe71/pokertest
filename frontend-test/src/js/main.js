@@ -12,11 +12,11 @@ PokerHand.prototype.compareWith = function(otherHand) {
 	if (hand1[0] === 'error' || hand2[0] === 'error') {
 		return "An invalid card has been entered please try again";
 	} else if (hand1[1] > hand2[1]) {
-		return [Result.win, hand1[0]];
+		return `${Result.win}. Player One wins with a ${hand1[0]}`;
 	} else if (hand1[1] < hand2[1]) {
-		return [Result.loss, hand2[0]];
+		return `${Result.loss}. Player Two wins with a ${hand2[0]}`;
 	} else {
-		return [Result.tie, hand1[0], hand2[0]];
+		return `${Result.tie}. It is a tie, both players have a ${hand1[0]}`;
 	}
 };
 
@@ -128,6 +128,7 @@ var createHand = function(hand) {
 	var sortUniArr = uniqueArray.sort(function(a, b){return a - b;});
 	var sortCouArr = countArray.sort(function(a, b){return a - b;});
 
+	//check for errors
 	if (error() === true) {
 		return ['error', 0];
 	}
@@ -142,7 +143,7 @@ var createHand = function(hand) {
 		return ['Flush', 6];
 	}
 
-
+	// check for other hands
 	if (uniqueArray.length === 2) {
 		if (sortCouArr[2] === 1) {
 			return ['Four of a kind', 8];

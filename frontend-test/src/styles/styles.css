@@ -1,11 +1,11 @@
 * {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: #ffe3e7;
 }
 
 .container {
-	max-width: 600px;
+	max-width: 400px;
 	margin: 0 auto;
-	background-color: #ffe3e7;
 }
 
 .card {
@@ -13,11 +13,27 @@
 	margin: 5px 10px 5px 0;
 }
 
+input {
+	background-color: white;
+	border: 1px solid grey;
+    border-radius: 2px;
+
+}
+
 .hand,
 #result,
 .display,
 .outcomeSection {
 	margin: 10px 30px;
+}
+
+#result,
+.card {
+	text-align: center;
+}
+
+#result {
+	margin-top: 20px;
 }
 
 .icon img {
@@ -29,6 +45,10 @@ header,
 .hand {
 	display: flex;
 	align-items: center;
+}
+
+header {
+	justify-content: center;
 }
 
 .hand {
@@ -43,6 +63,10 @@ h3 {
 
 .outcomeSection {
 	display: flex;
+}
+
+#outcome {
+	margin-left: 5px;
 }
 
 .handText {
