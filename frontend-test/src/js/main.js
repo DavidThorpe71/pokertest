@@ -10,14 +10,14 @@ PokerHand.prototype.compareWith = function(otherHand) {
 
 	
 	if (hand1[0] === 'error' || hand2[0] === 'error') {
-		return "An invalid card has been entered please try again"
+		return "An invalid card has been entered please try again";
 	} else if (hand1[1] > hand2[1]) {
 		return [Result.win, hand1[0]];
 	} else if (hand1[1] < hand2[1]) {
 		return [Result.loss, hand2[0]];
 	} else {
 		return [Result.tie, hand1[0], hand2[0]];
-	};
+	}
 };
 
 var newHandHtml = '';
@@ -28,7 +28,7 @@ for (var i = 0; i < 2; i++) {
 			<div class="handText">Enter cards for Player ${i + 1}: </div>
 			<div class="cards">`;
 	for (var j = 0; j < 5; j++){
-		newHandHtml += `<input id="hand${i}_card${j}" class="card" maxlength="2"></input>`
+		newHandHtml += `<input id="hand${i}_card${j}" class="card" maxlength="2"></input>`;
 	}
 	newHandHtml += `</div></div>`;
 }
@@ -67,11 +67,11 @@ var cardSuits = [];
 var createHand = function(hand) {
 	for (var i = 0; i < hand.length; i++) {
 		cardNumbers[i] = numInputs.indexOf(hand[i][0]) + 1;
-		cardSuits[i] = suitInputs.indexOf(hand[i][1]) + 1	
+		cardSuits[i] = suitInputs.indexOf(hand[i][1]) + 1;
 	}
 	
-	var sortedCardNumbers = cardNumbers.sort(function(a, b){return a - b});
-	var sortedCardSuits = cardSuits.sort(function(a, b){return a - b});
+	var sortedCardNumbers = cardNumbers.sort(function(a, b){return a - b;});
+	var sortedCardSuits = cardSuits.sort(function(a, b){return a - b;});
 
 	// check for input errors
 	function error() {
@@ -125,8 +125,8 @@ var createHand = function(hand) {
 	}
 	duplicateNumber();
 
-	var sortUniArr = uniqueArray.sort(function(a, b){return a - b});
-	var sortCouArr = countArray.sort(function(a, b){return a - b});
+	var sortUniArr = uniqueArray.sort(function(a, b){return a - b;});
+	var sortCouArr = countArray.sort(function(a, b){return a - b;});
 
 	if (error() === true) {
 		return ['error', 0];
@@ -140,7 +140,7 @@ var createHand = function(hand) {
 		return ['Straight' ,5];
 	} else if (flush()) {
 		return ['Flush', 6];
-	};
+	}
 
 
 	if (uniqueArray.length === 2) {
@@ -148,7 +148,7 @@ var createHand = function(hand) {
 			return ['Four of a kind', 8];
 		} else {
 			return ['Full House', 7];
-		};
+		}
 	} else if (uniqueArray.length === 3) {
 		if (sortCouArr[2] === 2) {
 			return ['Two Pairs', 3];
