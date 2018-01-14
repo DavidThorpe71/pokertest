@@ -12,11 +12,11 @@ PokerHand.prototype.compareWith = function(otherHand) {
 	if (hand1[0] === 'error' || hand2[0] === 'error') {
 		return "An invalid card has been entered please try again";
 	} else if (hand1[1] > hand2[1]) {
-		return `${Result.win}. Player One wins with a ${hand1[0]}`;
+		return `${Result.win}. Player One wins with a <strong>${hand1[0]}</strong>`;
 	} else if (hand1[1] < hand2[1]) {
-		return `${Result.loss}. Player Two wins with a ${hand2[0]}`;
+		return `${Result.loss}. Player Two wins with a <strong>${hand2[0]}</strong>`;
 	} else {
-		return `${Result.tie}. It is a tie, both players have a ${hand1[0]}`;
+		return `${Result.tie}. It is a tie, both players have a <strong>${hand1[0]}</strong>`;
 	}
 };
 
