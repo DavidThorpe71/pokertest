@@ -1,0 +1,64 @@
+<svg width="510" height="427" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100">
+ <defs>
+  <linearGradient id="imagebot_174">
+   <stop stop-color="#e5e5e5" id="imagebot_184" offset="0"/>
+   <stop stop-color="#dfdfdf" id="imagebot_183" offset="1"/>
+  </linearGradient>
+  <linearGradient id="imagebot_180">
+   <stop stop-color="#000000" id="imagebot_182" offset="0"/>
+   <stop stop-color="#000000" stop-opacity="0" id="imagebot_181" offset="1"/>
+  </linearGradient>
+  <radialGradient gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.000000,0.000000,0.000000,0.651376,3.896078e-15,10.75754)" r="15.57143" fy="30.85714" fx="22.57143" cy="30.85714" cx="22.57143" id="imagebot_171" xlink:href="#imagebot_180"/>
+  <linearGradient id="imagebot_173">
+   <stop stop-color="#ffffff" id="imagebot_179" offset="0"/>
+   <stop stop-color="#ffffff" stop-opacity="0" id="imagebot_178" offset="1"/>
+  </linearGradient>
+  <linearGradient id="imagebot_175">
+   <stop stop-color="#e5e5e5" offset="0" id="imagebot_177"/>
+   <stop stop-color="#c8c8c8" offset="1" id="imagebot_176"/>
+  </linearGradient>
+  <linearGradient y2="0.90776" x2="0.93618" y1="0.45128" x1="0.68436" id="imagebot_169" xlink:href="#imagebot_175"/>
+  <linearGradient y2="1.47187" x2="1.50379" y1="0.72141" x1="0.58219" id="imagebot_167" xlink:href="#imagebot_175"/>
+  <linearGradient y2="0.50524" x2="1" y1="0.50524" x1="0" id="imagebot_164" xlink:href="#imagebot_173"/>
+  <linearGradient y2="0.66661" x2="0.93541" y1="0.34592" x1="0.0865" id="imagebot_160" xlink:href="#imagebot_173"/>
+  <linearGradient y2="0.96664" x2="0.96476" y1="0.49658" x1="0.48718" id="imagebot_157" xlink:href="#imagebot_175"/>
+  <linearGradient y2="1.10041" x2="0.94467" y1="0.26833" x1="0.45023" id="imagebot_155" xlink:href="#imagebot_174"/>
+  <linearGradient y2="1.36301" x2="0.57589" y1="0.08343" x1="0.35399" id="imagebot_151" xlink:href="#imagebot_173"/>
+ </defs>
+ <title/>
+ <metadata id="imagebot_3">image/svg+xmlWicker Border 4 (A4 size)Arvin61r58Openclipart.orghttps://openclipart.org/https://openclipart.org/user-detail/Arvin61r58frameborderwickerwoodpatterntextureWicker framee/border
+sized for A4 (210x297mm) paper</metadata>
+ <g id="imagebot_1">
+  <title/>
+
+  <metadata id="imagebot_37">image/svg+xmlAudio CardAudio Card Devicehttp://jimmac.musichall.czJakub Steinersoundaudiocarddevice</metadata>
+  <g transform="translate(-32.5 -13.75) matrix(1.70992 0 0 1.70992 177.897 100.153)" id="imagebot_185">
+
+   <metadata id="imagebot_172">image/svg+xmlGamesAndreas NilssongamesJakub Steiner</metadata>
+   <g transform="matrix(2.96528 0 0 2.96528 0 0)" id="imagebot_147" label="Layer 1">
+    <path opacity="0.38636" fill="url(#imagebot_171)" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" marker-start="none" marker-mid="none" marker-end="none" stroke-miterlimit="4" stroke-dashoffset="0" transform="matrix(1.408115,0.000000,0.000000,0.492958,-7.856805,28.28872)" d="M38.14286,30.85714A15.57143,10.14286 0 1 1 7,30.85714A15.57143,10.14286 0 1 1 38.14286,30.85714z" id="imagebot_170"/>
+    <g transform="matrix(0.980280,-0.197617,0.197617,0.980280,-10.72835,1.085105)" id="imagebot_161">
+     <g id="imagebot_165" transform="matrix(0.965364,0.260908,-0.260908,0.965364,11.34921,-0.522676)">
+      <rect fill="url(#imagebot_169)" fill-rule="nonzero" stroke="#888a85" stroke-width="1" stroke-linecap="round" stroke-miterlimit="4" stroke-dashoffset="0" id="imagebot_168" width="30.93036" height="39.03263" x="-1.98053" y="8.21073" ry="2.82843" rx="3.03046" transform="matrix(0.965384,-0.260833,0.260833,0.965384,0.000000,0.000000)"/>
+      <rect fill="url(#imagebot_167)" fill-rule="nonzero" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-miterlimit="4" stroke-dashoffset="0" id="imagebot_166" width="28.99733" height="37.15021" x="-1.01305" y="9.10188" ry="1.94455" rx="2.23498" transform="matrix(0.965376,-0.260864,0.260803,0.965392,0.000000,0.000000)"/>
+     </g>
+     <path opacity="0.51648" fill="url(#imagebot_164)" fill-rule="evenodd" stroke-width="0.25000000pt" id="imagebot_163" d="M 10.307166021718979 30.04201992767334 C 23.157666021718978 34.20937992767334 29.54417602171898 24.30032992767334 40.77867602171898 30.04201992767334 L 38.89870602171898 10.83666992767334 C 38.89870602171898 10.83666992767334 38.28791602171898 8.68194992767334 36.88343602171898 8.93980992767334 L 12.425996021718978 9.17053992767334 C 10.831446021718978 9.02941992767334 10.623306021718978 10.13645992767334 10.65616602171898 11.315249927673339 L 10.307166021718979 30.04201992767334 z"/>
+     <path fill="#000000" fill-rule="evenodd" stroke-width="1" stroke-miterlimit="4" d="M17.6875,12.28125C14.13478,15.63064 12.70519,16.55444 12.6875,18.4375C12.67031,20.26803 14.98103,21.8684 17,20.71875C17.06419,21.65549 17.09453,23.27481 16.53125,23.9375C16.61964,23.9375 19,23.96875 19,23.96875C19,23.96875 18.38756,21.93878 18.3125,20.59375C20.52189,21.98562 22.66968,20.47453 22.6875,18.34375C22.70685,16.10957 21.40613,15.39715 17.6875,12.28125z" id="imagebot_162"/>
+    </g>
+    <g transform="translate(-1.000000,0.250000)" id="imagebot_148">
+     <g transform="translate(0.000000,-1.875000)" id="imagebot_149">
+      <g transform="translate(2.500000,2.750000)" id="imagebot_152">
+       <g id="imagebot_158" transform="translate(0.176776,7.247840)">
+        <path opacity="0.51648" fill="url(#imagebot_160)" fill-rule="evenodd" stroke-width="0.25000000pt" id="imagebot_159" d="M11.24905,13.68551C22.26751,21.50188 31.32286,13.95353 40.32878,22.78952L45.50453,4.77809L44.31062,2.25339L19.5069,-5.59962L16.78979,-4.29442L11.24905,13.68551z"/>
+       </g>
+       <rect fill="url(#imagebot_157)" fill-rule="nonzero" stroke="#888a85" stroke-width="1" stroke-linecap="round" stroke-miterlimit="4" stroke-dashoffset="0" id="imagebot_156" width="30.93037" height="39.03264" x="16.60003" y="-3.97974" ry="2.82843" rx="3.03046" transform="matrix(0.966464,0.256804,-0.256804,0.966464,0.000000,0.000000)"/>
+       <rect fill="url(#imagebot_155)" fill-rule="nonzero" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-miterlimit="4" stroke-dashoffset="0" id="imagebot_154" width="28.99733" height="37.15026" x="17.56714" y="-3.088" ry="1.94455" rx="2.23497" transform="matrix(0.966472,0.256773,-0.256834,0.966456,0.000000,0.000000)"/>
+       <path fill="#cc0000" fill-rule="evenodd" stroke-width="1" stroke-miterlimit="4" d="M28.21921,18.57943C32.01666,16.34947 35.37125,20.24155 34.57431,23.10783C33.84576,25.72812 31.53591,26.45757 25.32782,29.80204C21.30497,24.06532 19.7458,22.5732 20.60791,19.46371C21.49938,16.24467 25.6606,14.76448 28.21921,18.57943z" id="imagebot_153"/>
+      </g>
+      <path opacity="0.51648" fill="url(#imagebot_151)" fill-rule="evenodd" stroke-width="0.25000000pt" id="imagebot_150" d="M15.40872,24.6661C26.87857,31.80366 32.98729,22.75061 42.50975,31.02733L47.03167,13.79716C47.29684,12.82489 47.01348,12.05617 45.59927,11.70262L22.57675,5.27155C21.25092,4.918 20.12008,5.85438 19.94331,6.73826L15.40872,24.6661z"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
