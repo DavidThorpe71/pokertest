@@ -159,6 +159,6 @@ var createHand = function(hand) {
 	} else if (uniqueArray.length === 4) {
 		return ['Pair', 2];
 	} else if (uniqueArray.length === 5) {
-		return [`high card ${numInputs[sortUniArr[4] - 1]}`, 1 + (sortedCardNumbers[4] / 13)];
+		return [`high card ${numInputs[sortUniArr[4] - 1]}`, 1 + (sortedCardNumbers[4] / 14)];
 	}
 };
